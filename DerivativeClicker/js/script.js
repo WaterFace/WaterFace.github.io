@@ -792,13 +792,14 @@ $(document).ready(function(){
 	
   updateAll();
   
+	var intervalId = 0;
   $("#moneyButton").on('mousedown', function() {
-    timeoutId = setTimeout(function(){
+    intervalId = setInterval(function(){
 			moneyButtonClick(player.clickPower);
 			player.totalManualClicks += player.clickPower;
-		}, 1000);
+		}, 50);
 	}).on('mouseup mouseleave', function() {
-    clearTimeout(timeoutId);
+    clearInterval(intervalId);
 	});
 });
 
