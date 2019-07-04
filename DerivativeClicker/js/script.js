@@ -792,7 +792,7 @@ $(document).ready(function(){
 	
   updateAll();
   
-  $('#myElement').on('mousedown', function() {
+  $("#moneyButton").on('mousedown', function() {
     timeoutId = setTimeout(function(){
 			moneyButtonClick(player.clickPower);
 			player.totalManualClicks += player.clickPower;
